@@ -1,0 +1,8 @@
+$item-color: #d9534f;
+
+.item {
+  &:hover {
+    color: $item-color;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,134 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #b3e5fc, #f1f8e9);
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  max-width: 700px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.form-container,
+.quiz-container,
+.result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 6px #b3e5fc;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #005f8a;
+  transform: scale(1.03);
+}
+
+.question {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.options {
+  list-style-type: none;
+  padding: 0;
+}
+
+.options li {
+  background-color: #f4f7f8;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.options li:hover {
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.7);
+  border: 2px solid #00bfff;
+  transform: scale(1.02);
+}
+
+/* Selected and correctness styles */
+.selected {
+  transform: scale(1.03);
+}
+
+.correct {
+  border: 2px solid #4caf50 !important;
+  background-color: #e8f5e9 !important;
+}
+
+.wrong {
+  border: 2px solid #f44336 !important;
+  background-color: #ffebee !important;
+}
+
+.feedback {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Shake animation for correct answer */
+@keyframes shakeAnim {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shakeAnim 0.4s ease;
+}
